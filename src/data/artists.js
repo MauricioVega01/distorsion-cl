@@ -1,56 +1,69 @@
-// Mock data — reemplazar por fetch a la API (GET /artists?type=resident) cuando el backend esté listo.
+// src/data/artists.js
+// Artistas / residentes de DISTORSION — orden alfabético.
+// Fotos en public/artists/ (o donde tengas montada la carpeta de assets).
 
-export const residentArtists = [
+export const artists = [
   {
-    id: "art-01",
-    slug: "dirty",
+    id: "dirty",
     name: "DIRTY",
-    country: "CL",
-    city: "Santiago",
-    genre: "HARD TECHNO · 150-170 BPM",
-    photo: "https://images.unsplash.com/photo-1571266028243-e4c4d0651e8f?w=600&q=80",
-    bio: "Residente fundador de DISTORSION. Sets crudos, industriales, construidos para pistas que no piden permiso. Parte del colectivo desde su primera fecha.",
-    instagram: "https://instagram.com/fvckingdirty",
-    soundcloud: "#",
-    history: ["distorsion-w-void", "aniversario-distorsion", "distorsion-radikal"],
+    country: "Chile",
+    international: false,
+    photo: "/artists/dirty.png",
   },
   {
-    id: "art-02",
-    slug: "krater",
-    name: "KRATER",
-    country: "CL",
-    city: "Valparaíso",
-    genre: "SCHRANZ · INDUSTRIAL · 160+ BPM",
-    photo: "https://images.unsplash.com/photo-1594623930572-300a3011d9ae?w=600&q=80",
-    bio: "Desde Valparaíso, KRATER trae schranz e industrial techno a alta velocidad. Uno de los sets más intensos del colectivo.",
-    instagram: "#",
-    soundcloud: "#",
-    history: ["distorsion-w-void"],
+    id: "faust",
+    name: "FAUST",
+    country: "Rumania",
+    international: true,
+    photo: "/artists/faust.png",
   },
   {
-    id: "art-03",
-    slug: "acido",
-    name: "ACIDÖ",
-    country: "CL",
-    city: "Santiago",
-    genre: "ACID · RAVE · +150 BPM",
-    photo: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&q=80",
-    bio: "Líneas de acid crudas y una energía rave old school. ACIDÖ es la parte más hipnótica del line up residente.",
-    instagram: "#",
-    soundcloud: "#",
-    history: ["aniversario-distorsion"],
+    id: "floyd",
+    name: "FLOYD",
+    country: "Chile",
+    international: false,
+    photo: "/artists/floyd.png",
   },
   {
-    id: "art-04",
-    slug: "rawkilla",
-    name: "RAWKILLA",
-    country: "CL",
-    city: "Maipú",
-    genre: "RAWSTYLE · UPTEMPO",
-    photo: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80",
-    bio: "Rawstyle y uptempo sin freno, directo desde Maipú. RAWKILLA cierra las fechas más under del colectivo.",
-    instagram: "#",
-    soundcloud: "#",
-    history: ["distorsion-radikal"],
+    id: "nekto",
+    name: "NEKTO",
+    country: "Chile",
+    international: false,
+    photo: "/artists/nekto.png",
+  },
+  {
+    id: "paula-sanz",
+    name: "PAULA SANZ",
+    country: "España",
+    international: true,
+    photo: "/artists/paula-sanz.png",
+  },
+  {
+    id: "szg",
+    name: "SZG",
+    country: "Brasil",
+    international: true,
+    photo: "/artists/szg.png",
+  },
+  {
+    id: "tacidelli",
+    name: "Tacidelli",
+    country: "Brasil",
+    international: true,
+    photo: "/artists/tacidelli.png",
+  },
+  {
+    id: "thunder21",
+    name: "THUNDER21",
+    country: "Chile",
+    international: false,
+    photo: "/artists/thunder21.png",
   },
 ];
+
+// Helper para mostrar la etiqueta bajo el nombre:
+// Chile -> "Chile"
+// Internacional -> "Internacional · País"
+export function artistLocationLabel(artist) {
+  return artist.international ? `Internacional · ${artist.country}` : artist.country;
+}
