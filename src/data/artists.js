@@ -1,69 +1,54 @@
 // src/data/artists.js
 // Artistas / residentes de DISTORSION — orden alfabético.
-// Fotos en public/artists/ (o donde tengas montada la carpeta de assets).
+// Fotos en public/artists/
 
-export const artists = [
+export const residentArtists = [
   {
-    id: "dirty",
+    slug: "dirty",
     name: "DIRTY",
     country: "Chile",
-    international: false,
     photo: "/artists/dirty.png",
   },
   {
-    id: "faust",
+    slug: "faust",
     name: "FAUST",
-    country: "Rumania",
-    international: true,
+    country: "Internacional · Rumania",
     photo: "/artists/faust.png",
   },
   {
-    id: "floyd",
+    slug: "floyd",
     name: "FLOYD",
     country: "Chile",
-    international: false,
     photo: "/artists/floyd.png",
   },
   {
-    id: "nekto",
+    slug: "nekto",
     name: "NEKTO",
     country: "Chile",
-    international: false,
     photo: "/artists/nekto.png",
   },
   {
-    id: "paula-sanz",
+    slug: "paula-sanz",
     name: "PAULA SANZ",
-    country: "España",
-    international: true,
+    country: "Internacional · España",
     photo: "/artists/paula-sanz.png",
   },
   {
-    id: "szg",
+    slug: "szg",
     name: "SZG",
-    country: "Brasil",
-    international: true,
+    country: "Internacional · Brasil",
     photo: "/artists/szg.png",
   },
   {
-    id: "tacidelli",
+    slug: "tacidelli",
     name: "Tacidelli",
-    country: "Brasil",
-    international: true,
+    country: "Internacional · Brasil",
     photo: "/artists/tacidelli.png",
   },
   {
-    id: "thunder21",
+    slug: "thunder21",
     name: "THUNDER21",
     country: "Chile",
-    international: false,
     photo: "/artists/thunder21.png",
   },
 ];
-
-// Helper para mostrar la etiqueta bajo el nombre:
-// Chile -> "Chile"
-// Internacional -> "Internacional · País"
-export function artistLocationLabel(artist) {
-  return artist.international ? `Internacional · ${artist.country}` : artist.country;
-}
